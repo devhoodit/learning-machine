@@ -1,0 +1,17 @@
+[project]
+name = "learning-machine"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "ipykernel>=6.29.5",
+    "lightgbm>=4.6.0",
+    "numpy>=2.3.1",
+    "optuna>=4.4.0",
+    "pandas>=2.3.0",
+    "pyyaml>=6.0.2",
+    "ruff>=0.12.1",
+    "scikit-learn>=1.7.0",
+    "xgboost>=3.0.2",
+]
