@@ -7,14 +7,23 @@ from .engine import (
 from .engine_type import DataEngineType
 
 from .dataframe import ConcatDFs, DropColumns
-from .operator import Add, Sub, Mul, Div
+from .operator import BinaryOperator, Add, Sub, Mul, Div
 from .date import (
     StringToDatetime,
+    DatetimeDayOfYearSinCos,
+    DatetimeMonthOfYearSinCos,
+    DatetimeDayOfMonthSinCos,
+    DatetimeDayOfWeekSinCos,
+    DatetimeDayOfYear,
+    DatetimeMonthOfYear,
+    DatetimeDayOfMonth,
+    DatetimeDayOfWeek,
+    DatetimeIsWeekend,
 )
-from .na import NdFillSinkHole, FillSinkHole, DropNARow, FillNa, FillNaFrom
+from .na import NdFillSinkHole, FillSinkHole, DropNARow, FillNaWithValue, FillNaFrom
 from .category_encoder import OneHotEncoder, LabelEncoder
 from .wrapper import wrap_df2nd, DF2NDarr
-from .norm import StandardScaler
+from .norm import StandardScaler, RobustScaler, MinMaxScaler
 
 __all__ = [
     "DataEngineType",
@@ -24,17 +33,27 @@ __all__ = [
     "DropColumns",
     "create_engines_from_config",
     #
+    "BinaryOperator",
     "Add",
     "Sub",
     "Mul",
     "Div",
     #
     "StringToDatetime",
+    "DatetimeDayOfYearSinCos",
+    "DatetimeMonthOfYearSinCos",
+    "DatetimeDayOfMonthSinCos",
+    "DatetimeDayOfWeekSinCos",
+    "DatetimeDayOfYear",
+    "DatetimeMonthOfYear",
+    "DatetimeDayOfMonth",
+    "DatetimeDayOfWeek",
+    "DatetimeIsWeekend",
     #
     "NdFillSinkHole",
     "FillSinkHole",
     "DropNARow",
-    "FillNa",
+    "FillNaWithValue",
     "FillNaFrom",
     #
     "OneHotEncoder",
@@ -44,4 +63,6 @@ __all__ = [
     "DF2NDarr",
     #
     "StandardScaler",
+    "RobustScaler",
+    "MinMaxScaler",
 ]
