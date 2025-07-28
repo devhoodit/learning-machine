@@ -2,7 +2,10 @@
     <img src="./imgs/learning_machine.png" width="256px">
     <h1>Learning Machine</h1>
     <p>When you learn machine, the machine also learns you.</p>
+    <a href="https://devhoodit.github.io/learning-machine/">Document</a>
 </div>
+
+----------------
 
 Learning Machine, library helps process data, model construction for machine learning. Quickly build and version-control your data processing pipeline using easy-to-read and easy-to-edit config file. Insipred by Detectron.
 
