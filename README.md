@@ -14,6 +14,17 @@ Learning Machine, library helps process data, model construction for machine lea
 - Create an engine with a readable config file (YAML)
 - Support widely used data processing engines. (e.g. scikit-learn scalers)
 
+# Install
+#### As package (local)
+```
+git clone https://github.com/devhoodit/learning-machine.git
+pip install -e .
+```
+#### As directory
+```
+git clone https://github.com/devhoodit/learning-machine.git
+```
+
 # Quick Start
 ## Create with config file
 ```yaml

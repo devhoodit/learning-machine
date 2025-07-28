@@ -28,8 +28,10 @@ Params provides default optuna tuning parameters.
 
 (install)=
 ## Install
-#### as package
+#### as package (local)
 ```
+git clone https://github.com/devhoodit/learning-machine.git
+pip install -e .
 ```
 
 #### as directory
