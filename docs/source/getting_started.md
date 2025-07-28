@@ -1,0 +1,206 @@
+# Getting Started
+
+## Contents
+- {ref}`what-is-learning-machine-for`
+- {ref}`overview`
+- {ref}`install`
+- {ref}`quick-start`
+
+(what-is-learning-machine-for)=
+## What is Learning Machine (LM) for?
+Learning Machine (LM) is for supporting machine learning data preprocessing, model construction, and experiment configuration. LM supports configuration files in YAML format, allowing users to easily define processing pipelines and manage version. Also, provides built-in, general-purpose and widely used processing engines to facilitate convenient processing.
+
+(overview)=
+## Overview
+Learning Machine consists of several major components.
+- Data engine
+- Model (work in progress)
+- Params (work in progress)
+
+#### Data engine
+Data engine processes input data. User can stack process engines to build complex pipeline. By default, data engine supports processing with pandas.Dataframe.
+
+#### Model
+Model provides a consistent interface (train, validate, test).
+
+#### Params
+Params provides default optuna tuning parameters. 
+
+(install)=
+## Install
+#### as package
+```
+```
+
+#### as directory
+```
+git clone https://github.com/devhoodit/learning-machine.git
+```
+
+(quick-start)=
+## Quick start
+
+#### Process data
+We will start with [titanic dataset](https://www.kaggle.com/c/titanic/data). In titanic dataset, there are some nan values and categorical data.
+```python
+import seaborn as sns
+
+data = sns.load_dataset('titanic')
+# pclass = class, so drop
+data = data.drop(["pclass"], axis=1)
+print(data.head(3))
+print()
+print(data.info())
+```
+```
+   survived     sex   age  sibsp  parch     fare embarked  class    who  \
+0         0    male  22.0      1      0   7.2500        S  Third    man   
+1         1  female  38.0      1      0  71.2833        C  First  woman   
+2         1  female  26.0      0      0   7.9250        S  Third  woman   
+
+   adult_male deck  embark_town alive  alone  
+0        True  NaN  Southampton    no  False  
+1       False    C    Cherbourg   yes  False  
+2       False  NaN  Southampton   yes   True 
+
+RangeIndex: 891 entries, 0 to 890
+Data columns (total 14 columns):
+ #   Column       Non-Null Count  Dtype   
+---  ------       --------------  -----   
+ 0   survived     891 non-null    int64   
+ 1   sex          891 non-null    object  
+ 2   age          714 non-null    float64 
+ 3   sibsp        891 non-null    int64   
+ 4   parch        891 non-null    int64   
+ 5   fare         891 non-null    float64 
+ 6   embarked     889 non-null    object  
+ 7   class        891 non-null    category
+ 8   who          891 non-null    object  
+ 9   adult_male   891 non-null    bool    
+ 10  deck         203 non-null    category
+ 11  embark_town  889 non-null    object  
+ 12  alive        891 non-null    object  
+ 13  alone        891 non-null    bool    
+dtypes: bool(2), category(2), float64(2), int64(3), object(5)
+```
+```age``` and ```deck``` have nan values.
+```sex```, ```embarked```, ```class```, ```who```, ```adult_male```, ```deck```, ```embark_town``` and ```alone``` are categorical data.  
+We will drop nan value rows and encode categorical data to one hot representation.  
+We will build data processing pipeline with Learning Machine's data engine. Data engine is created via initial settings and processes data by passing data into engine instance. We can build processing pipeline by flowing data through multiple data engines sequentially.  
+The following example code shows commonly used data engines and important features when using them.
+
+```python
+import learning_machine.engine as lm_engine
+
+category_cols = ["sex", "embarked", "class", "who", "adult_male", "deck", "embark_town", "alone"]
+
+# One Hot Encoder return NEW dataframe, so we need to concat it with original dataframe
+onehot_engine = lm_engine.OneHotEncoder(cols=category_cols)
+# Concat original data with new data
+concat_engine = lm_engine.ConcatDFs([onehot_engine])
+
+# drop nan value rows
+dropna_engine = lm_engine.DropNARow(cols=["age"])
+
+# drop processed columns. these columns are already encoded
+dropcol_engine = lm_engine.DropColumns(cols=category_cols)
+
+# apply engie sequentially
+seq_engine = lm_engine.SequentialEngine([concat_engine, dropna_engine, dropcol_engine])
+
+# process data
+data = seq_engine(data)
+data.info()
+```
+```
+Index: 714 entries, 0 to 890
+Data columns (total 34 columns):
+ #   Column              Non-Null Count  Dtype  
+---  ------              --------------  -----  
+ 0   survived            714 non-null    int64  
+ 1   age                 714 non-null    float64
+ 2   sibsp               714 non-null    int64  
+ 3   parch               714 non-null    int64  
+ 4   fare                714 non-null    float64
+ 5   alive               714 non-null    object 
+ 6   onehot_female       714 non-null    float64
+ 7   onehot_male         714 non-null    float64
+ 8   onehot_C            714 non-null    float64
+ 9   onehot_Q            714 non-null    float64
+ 10  onehot_S            714 non-null    float64
+ 11  onehot_nan          714 non-null    float64
+ 12  onehot_First        714 non-null    float64
+ 13  onehot_Second       714 non-null    float64
+ 14  onehot_Third        714 non-null    float64
+ 15  onehot_child        714 non-null    float64
+ 16  onehot_man          714 non-null    float64
+ 17  onehot_woman        714 non-null    float64
+ 18  onehot_False        714 non-null    float64
+ 19  onehot_True         714 non-null    float64
+ 20  onehot_A            714 non-null    float64
+ 21  onehot_B            714 non-null    float64
+ 22  onehot_C            714 non-null    float64
+ 23  onehot_D            714 non-null    float64
+ 24  onehot_E            714 non-null    float64
+ 25  onehot_F            714 non-null    float64
+ 26  onehot_G            714 non-null    float64
+ 27  onehot_nan          714 non-null    float64
+ 28  onehot_Cherbourg    714 non-null    float64
+ 29  onehot_Queenstown   714 non-null    float64
+ 30  onehot_Southampton  714 non-null    float64
+ 31  onehot_nan          714 non-null    float64
+ 32  onehot_False        714 non-null    float64
+ 33  onehot_True         714 non-null    float64
+dtypes: float64(30), int64(3), object(1)
+```
+nan value rows are droped and one hot encodings are also successfully done.
+The following is a brief description of each engine.
+- ```OneHotEncoder```: One hot encoding using [scikit-learn onehot encoder](https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.OneHotEncoder.html). Engine returns new dataframe in which each column name is onehot_{category_name}
+- ```ConcatDFs```: Apply each engine and concat return dataframe with original data. This engine is used to concatenate the resulting Dataframes produced by engines.
+- ```DropNARows```: Drop na row in specific columns
+- ```DropColumns```: Drop columns
+- ```SequentialEngine```: Apply engines sequentially. data -> engine1 -> data1 -> engine2 -> data2. This is useful for grouping multiple engines into a single composite engine.
+
+Other engines can be found [here](api/engine.md).
+#### Build data engine from config file
+The above example demonstrates building data engine with code, but it can also be built via a config file. Learning Machine supports YAML format config file.
+```yaml
+# config.yaml
+
+data_engine:
+    - ConcatDFs:
+        - OneHotEncoder:
+            cols:
+                - sex
+                - embarked
+                - class
+                - who
+                - adult_male
+                - deck
+                - embark_town
+                - alone
+
+    - DropNARow:
+        cols:
+            - age
+
+    - DropColumns:
+        cols:
+            - sex
+            - embarked
+            - class
+            - who
+            - adult_male
+            - deck
+            - embark_town
+            - alone
+```
+As you might have noticed, config file format is same as name of data engine and arguments (key-value). There is one exception: ```ConcatDFs``` format is list of engines. Since ```ConcatDFs``` takes engines as arguments, it requires a special format. Some engine might require a specialized format.
+Now, we will build engine from config file.
+```python
+from learning_machine import create_from_config
+
+bundle = create_from_config("config.yaml")
+engine = bundle.data_engine
+```
+```create_from_config``` return bundle (we can build other component from config), so we need to get data engine. In config file, the engines are specified as a list. However, ```create_from_config``` automatically apply ```SequentialEngine``` to concat engines. Additionally, individual engines can be accessed through the ```bundle.data_engines``` attribute.
