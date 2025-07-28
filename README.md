@@ -26,7 +26,27 @@ git clone https://github.com/devhoodit/learning-machine.git
 ```
 
 # Quick Start
-## Create with config file
+## Build engine with code
+```python
+import pandas as pd
+from learning_machine.engine import SequentialEngine, StringToDatetime, FillNa, StandardScaler
+
+string_to_datetime_engine = StringToDatetime(col="datetime")
+fill_na_engine = FillNa(cols=["age"], fillwith=10)
+standard_scaler_engine = StandardScaler(cols=["income"])
+
+seq_engine = SequentialEngine([
+    string_to_datetime_engine,
+    fill_na_engine,
+    standard_scaler_engine
+])
+
+engine = seq_engine
+
+data = pd.read_csv("data.csv")
+data = engine(data)
+```
+## Build engine with config file
 ```yaml
 # config.ymal
 
@@ -60,22 +80,6 @@ data = pd.read_csv("data.csv")
 data = engine(data)
 ```
 
-## Create with code
-```python
-from learning_machine.engine import SequentialEngine, StringToDatetime, FillNa, StandardScaler
-
-string_to_datetime_engine = StringToDatetime(col="datetime")
-fill_na_engine = FillNa(cols=["age"], fillwith=10)
-standard_scaler_engine = StandardScaler(cols=["income"])
-
-seq_engine = SequentialEngine([
-    string_to_datetime_engine,
-    fill_na_engine,
-    standard_scaler_engine
-])
-
-engine = seq_engine
-```
 
 
 
