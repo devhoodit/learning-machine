@@ -6,9 +6,10 @@ from learning_machine.zoo.zoo import DATA_ENGINE_ZOO
 
 @DATA_ENGINE_ZOO.regist()
 class ConcatDFs(DataEngine):
-    def __init__(self, engines: list[DataEngine]):
-        """concat the outputs of the engines into pd.Dataframe
+    """Concat the outputs of the engines into pd.Dataframe"""
 
+    def __init__(self, engines: list[DataEngine]):
+        """
         Args:
             engines (list[DataEngine]): engines
         """
@@ -29,9 +30,10 @@ class ConcatDFs(DataEngine):
 
 @DATA_ENGINE_ZOO.regist()
 class DropColumns(DataEngine):
-    def __init__(self, cols: list[str], copy=True):
-        """drop columns from dataframe
+    """Drop columns from dataframe"""
 
+    def __init__(self, cols: list[str], copy=True):
+        """
         Args:
             cols (list[str]): columns that want to drop
             copy (bool, optional): copy data and return new data that processed. If False, it can effect to original data. Defaults to True.

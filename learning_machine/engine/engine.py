@@ -6,6 +6,14 @@ from learning_machine.zoo import DATA_ENGINE_ZOO
 
 
 def create_engines_from_config(config: list[dict]) -> list[DataEngine]:
+    """Create engines from engine config list.
+
+    Args:
+        config (list[dict]): engines config
+
+    Returns:
+        list[DataEngine]: engines
+    """
     engines = []
     for e in config:
         engine_name = next(iter(e))
@@ -21,11 +29,13 @@ U = TypeVar("U")
 
 
 class DataEngine(ABC, Generic[T, U]):
+    """Data engine interface."""
+
     engine_type = []
 
     @abstractmethod
     def __call__(self, data: T) -> U:
-        """process data
+        """Process data
 
         Args:
             data (T)
@@ -37,7 +47,7 @@ class DataEngine(ABC, Generic[T, U]):
 
     @classmethod
     def from_config(cls, config: dict) -> DataEngine:
-        """create engine from config
+        """Create engine from config.
 
         Args:
             config (dict): engine configuration information
@@ -50,10 +60,12 @@ class DataEngine(ABC, Generic[T, U]):
 
 @DATA_ENGINE_ZOO.regist()
 class SequentialEngine(DataEngine, Generic[T, U]):
-    def __init__(self, engines: list[DataEngine]):
-        """apply the engines sequentially.
-        data -> engine1 -> data1 -> engine2 -> data2
+    """Apply engines sequentially.
+    data -> engine1 -> data1 -> engine2 -> data2
+    """
 
+    def __init__(self, engines: list[DataEngine]):
+        """
         Args:
             engines (list[DataEngine]): engines
         """

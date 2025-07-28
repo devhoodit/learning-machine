@@ -8,9 +8,10 @@ from learning_machine.zoo import DATA_ENGINE_ZOO
 
 @DATA_ENGINE_ZOO.regist()
 class OneHotEncoder(DataEngine):
-    def __init__(self, cols: list[str], prefix: str = "onehot", sparse_output=False):
-        """onehot encoder from scikit-learn. return columns {prefix}_{col}.
+    """Onehot encoder from scikit-learn. return columns {prefix}_{col}."""
 
+    def __init__(self, cols: list[str], prefix: str = "onehot", sparse_output=False):
+        """
         Args:
             cols (list[str]): list of columns need encoding
             prefix (str, optional): return column prefix. Defaults to "onehot".
@@ -39,9 +40,10 @@ class OneHotEncoder(DataEngine):
 
 @DATA_ENGINE_ZOO.regist()
 class LabelEncoder(DataEngine):
-    def __init__(self, col: str, prefix: str = "label"):
-        """label encoder from scikit-learn. return column {prefix}_{col}.
+    """Label encoder from scikit-learn. return column {prefix}_{col}."""
 
+    def __init__(self, col: str, prefix: str = "label"):
+        """
         Args:
             col (str): column name
             prefix (str, optional): return column prefix. Defaults to "label".

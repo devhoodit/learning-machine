@@ -13,10 +13,10 @@ def sin_cos_transform(x: np.ndarray, period: float) -> tuple[np.ndarray, np.ndar
 @DATA_ENGINE_ZOO.regist()
 class SinCos(DataEngine):
     engine_type = [DataEngineType.RETURN_NEW_PD]
+    """Periodically interpret the data"""
 
     def __init__(self, col: str, prefix="", period: float = 1.0):
-        """periodically interpret the data
-
+        """
         Args:
             col (str):
             prefix (str, optional): prefix of return dataframe column name. Defaults to "".

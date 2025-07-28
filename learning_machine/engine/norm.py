@@ -6,9 +6,10 @@ import pandas as pd
 
 @DATA_ENGINE_ZOO.regist()
 class StandardScaler(DataEngine):
-    def __init__(self, cols: list[str], return_new=False, prefix="standard_scale"):
-        """Standard scaler from scikit-learn.
+    """Standard scaler from scikit-learn."""
 
+    def __init__(self, cols: list[str], return_new=False, prefix="standard_scale"):
+        """
         Args:
             cols (list[str]): target columns
             return_new (bool, optional): return new scaled dataframe. If False, modify original dataframe. Defaults to False.
@@ -43,9 +44,10 @@ class StandardScaler(DataEngine):
 
 @DATA_ENGINE_ZOO.regist()
 class RobustScaler(DataEngine):
-    def __init__(self, cols: list[str], return_new=False, prefix="robust_scale"):
-        """RobustScaler from scikit-learn.
+    """RobustScaler from scikit-learn."""
 
+    def __init__(self, cols: list[str], return_new=False, prefix="robust_scale"):
+        """
         Args:
             cols (list[str]): target columns
             return_new (bool, optional): return new scaled dataframe. If False, modify original dataframe. Defaults to False.
@@ -80,9 +82,10 @@ class RobustScaler(DataEngine):
 
 @DATA_ENGINE_ZOO.regist()
 class MinMaxScaler(DataEngine):
-    def __init__(self, cols: list[str], return_new=False, prefix="min_max_scale"):
-        """MinMaxScaler from scikit-learn.
+    """MinMaxScaler from scikit-learn."""
 
+    def __init__(self, cols: list[str], return_new=False, prefix="min_max_scale"):
+        """
         Args:
             cols (list[str]): _description_
             return_new (bool, optional): return new scaled dataframe. If False, modify original dataframe. Defaults to False.

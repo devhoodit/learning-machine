@@ -7,7 +7,7 @@ from .engine import DataEngine
 
 
 class NdFillSinkHole(DataEngine):
-    """fill continuous nan value"""
+    """Fill continuous nan value."""
 
     def __init__(self, length: int, fillwith: Any):
         self.length = length
@@ -29,28 +29,39 @@ class NdFillSinkHole(DataEngine):
         return arr
 
 
-@DATA_ENGINE_ZOO.regist("FillSinkHole")
+@DATA_ENGINE_ZOO.regist()
 class FillSinkHole(NdFillSinkHole):
-    def __init__(self, col: str, length: int, fillwith: Any, name: str = ""):
+    """Fill in the interval where nan value appear continuously with specific value."""
+
+    def __init__(self, col: str, length: int, fillwith: Any):
+        """
+        Args:
+            col (str): target column
+            length (int): interval length
+            fillwith (Any): fill value
+            name (str, optional): . Defaults to "".
+        """
         super().__init__(length, fillwith)
-        self.column = col
-        self.name = name
-        if not name:
-            self.name = col
+        self.col = col
 
     def __call__(self, data: pd.DataFrame) -> pd.DataFrame:
-        arr = data[self.column].to_numpy()
+        arr = data[self.col].to_numpy()
         fill = super().__call__(arr)
-        data[self.name] = fill
+        data[self.col] = fill
         return data
 
 
-@DATA_ENGINE_ZOO.regist("DropNARow")
+@DATA_ENGINE_ZOO.regist()
 class DropNARow(DataEngine):
-    "drop nan value row"
+    """Drop rows contain missing value in specific columns."""
 
-    def __init__(self, columns: list[str], copy=True):
-        self.columns = columns
+    def __init__(self, cols: list[str], copy=True):
+        """
+        Args:
+            cols (list[str]): columns to drop nan values
+            copy (bool, optional): copy new dataframe and process. Defaults to True.
+        """
+        self.columns = cols
         self.copy = copy
 
     def __call__(self, data: pd.DataFrame) -> pd.DataFrame:
@@ -60,9 +71,16 @@ class DropNARow(DataEngine):
         return data.dropna(subset=self.columns)
 
 
-@DATA_ENGINE_ZOO.regist("FillNa")
-class FillNa(DataEngine):
+@DATA_ENGINE_ZOO.regist()
+class FillNaWithValue(DataEngine):
+    """Fill nan rows with specific value."""
+
     def __init__(self, cols: list[str], fillwith):
+        """
+        Args:
+            cols (list[str]): columns to fill
+            fillwith (_type_): fill value
+        """
         self.cols = cols
         self.fillwith = fillwith
 
@@ -72,9 +90,16 @@ class FillNa(DataEngine):
         return data
 
 
-@DATA_ENGINE_ZOO.regist("FillNaFrom")
+@DATA_ENGINE_ZOO.regist()
 class FillNaFrom(DataEngine):
+    """Fill nan value from another column."""
+
     def __init__(self, col: str, from_col: str):
+        """
+        Args:
+            col (str): target column
+            from_col (str): from column
+        """
         self.col = col
         self.from_col = from_col
 

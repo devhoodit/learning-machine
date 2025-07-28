@@ -9,11 +9,12 @@ from learning_machine.zoo import DATA_ENGINE_ZOO
 
 @DATA_ENGINE_ZOO.regist()
 class StringToDatetime(DataEngine):
+    """String to pd.datetime object. Replace original string column to datetime object column"""
+
     engine_type = [DataEngineType.SIDE_EFFECT]
 
     def __init__(self, col: str, format: str | None = None):
-        """string to pd.datetiem object. Replace original string column to datetime object column
-
+        """
         Args:
             col (str): column name
             format (str | None, optional): datetime format. Defaults to None.
@@ -28,11 +29,12 @@ class StringToDatetime(DataEngine):
 
 @DATA_ENGINE_ZOO.regist()
 class DatetimeDayOfYearSinCos(DataEngine):
+    """Periodically transforms the day of year. Return 2 column {prefix}_{col}_sin/cos."""
+
     engine_type = [DataEngineType.RETURN_NEW_PD]
 
     def __init__(self, col: str, prefix="day_of_year"):
-        """Periodically transforms the day of year. Return 2 column {prefix}_{col}_sin/cos.
-
+        """
         Args:
             col (str): column name
             prefix (str, optional): return column prefix. Defaults to "day_of_year".
@@ -55,11 +57,12 @@ class DatetimeDayOfYearSinCos(DataEngine):
 
 @DATA_ENGINE_ZOO.regist()
 class DatetimeDayOfYear(DataEngine):
+    """Get day of year from datetime column. Return {prefix}_{col}."""
+
     engine_type = [DataEngineType.RETURN_NEW_PD]
 
     def __init__(self, col: str, prefix="day_of_year"):
-        """get day of year from datetime column. Return {prefix}_{col}.
-
+        """
         Args:
             col (str): column name
             prefix (str, optional): return column prefix. Defaults to "day_of_year".
@@ -79,11 +82,12 @@ class DatetimeDayOfYear(DataEngine):
 
 @DATA_ENGINE_ZOO.regist()
 class DatetimeMonthOfYear(DataEngine):
+    """Get month of year from datetime column. Return {prefix}_{col}."""
+
     engine_type = [DataEngineType.RETURN_NEW_PD]
 
     def __init__(self, col: str, prefix="month_of_year"):
-        """get month of year from datetime column. Return {prefix}_{col}.
-
+        """
         Args:
             col (str): column name
             prefix (str, optional): return column prefix. Defaults to "month_of_year".
@@ -103,11 +107,12 @@ class DatetimeMonthOfYear(DataEngine):
 
 @DATA_ENGINE_ZOO.regist()
 class DatetimeMonthOfYearSinCos(DataEngine):
+    """Periodically transform the month of year. Return 2 column {prefix}_{col}_sin/cos"""
+
     engine_type = [DataEngineType.RETURN_NEW_PD]
 
     def __init__(self, col: str, prefix="month_of_year"):
-        """Periodically transform the month of year. Return 2 column {prefix}_{col}_sin/cos
-
+        """
         Args:
             col (str): column name
             prefix (str, optional): return column prefix. Defaults to "month_of_year".
@@ -129,11 +134,12 @@ class DatetimeMonthOfYearSinCos(DataEngine):
 
 @DATA_ENGINE_ZOO.regist()
 class DatetimeDayOfMonth(DataEngine):
+    """Get day of month from datetime column. Return {prefix}_{col}."""
+
     engine_type = [DataEngineType.RETURN_NEW_PD]
 
     def __init__(self, col: str, prefix="day_of_month"):
-        """get day of month from datetime column. Return {prefix}_{col}.
-
+        """
         Args:
             col (str): column name
             prefix (str, optional): return column prefix. Defaults to "day_of_month".
@@ -153,11 +159,12 @@ class DatetimeDayOfMonth(DataEngine):
 
 @DATA_ENGINE_ZOO.regist()
 class DatetimeDayOfMonthSinCos(DataEngine):
+    """Periodically transform the day of month. Return 2 column {prefix}_{col}_sin/cos."""
+
     engine_type = [DataEngineType.RETURN_NEW_PD]
 
     def __init__(self, col: str, prefix="day_of_month", norm=True):
-        """Periodically transform the day of month. Return 2 column {prefix}_{col}_sin/cos.
-
+        """
         Args:
             col (str): column name
             prefix (str, optional): prefix of column. Defaults to "day_of_month".
@@ -186,11 +193,12 @@ class DatetimeDayOfMonthSinCos(DataEngine):
 
 @DATA_ENGINE_ZOO.regist()
 class DatetimeDayOfWeek(DataEngine):
+    """Get day of week from datetime column. Return {prefix}_{col}."""
+
     engine_type = [DataEngineType.RETURN_NEW_PD]
 
     def __init__(self, col: str, prefix="day_of_week"):
-        """get day of week from datetime column. Return {prefix}_{col}.
-
+        """
         Args:
             col (str): column name
             prefix (str, optional): return column prefix. Defaults to "day_of_week".
@@ -210,11 +218,12 @@ class DatetimeDayOfWeek(DataEngine):
 
 @DATA_ENGINE_ZOO.regist()
 class DatetimeDayOfWeekSinCos(DataEngine):
+    """Periodically transforms the day of week. Return 2 column {prefix}_{col}_sin/cos"""
+
     engine_type = [DataEngineType.RETURN_NEW_PD]
 
     def __init__(self, col: str, prefix="day_of_week"):
-        """Periodically transforms the day of week. Return 2 column {prefix}_{col}_sin/cos
-
+        """
         Args:
             col (str): column name
             prefix (str, optional): return column prefix. Defaults to "day_of_week".
@@ -236,11 +245,12 @@ class DatetimeDayOfWeekSinCos(DataEngine):
 
 @DATA_ENGINE_ZOO.regist()
 class DatetimeIsWeekend(DataEngine):
+    """Get datetime is weekend. Return {prefix}_{col}"""
+
     engine_type = [DataEngineType.RETURN_NEW_PD]
 
     def __init__(self, col: str, prefix="is_weekend", include_sat=True):
-        """get datetime is weekend. Return {prefix}_{col}
-
+        """
         Args:
             col (str): column name
             prefix (str, optional): return column prefix. Defaults to "is_weekend".
