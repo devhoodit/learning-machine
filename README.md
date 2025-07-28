@@ -1,4 +1,5 @@
 <div align="center">
+    <img src="./imgs/learning_machine.png" width="256px">
     <h1>Learning Machine</h1>
     <p>When you learn machine, the machine also learns you.</p>
 </div>
