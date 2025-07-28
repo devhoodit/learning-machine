@@ -1,3 +1,6 @@
+# sphinx doc gen
+generated/
+
 # tmp
 tmp/
 
