@@ -1,0 +1,29 @@
+﻿SequentialEngine
+================
+
+.. currentmodule:: learning_machine.engine
+
+.. autoclass:: learning_machine.engine.SequentialEngine
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~SequentialEngine.__init__
+      ~SequentialEngine.from_config
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~SequentialEngine.engine_type
+   
+   

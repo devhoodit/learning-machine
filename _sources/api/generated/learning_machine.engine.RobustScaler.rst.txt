@@ -1,0 +1,29 @@
+﻿RobustScaler
+============
+
+.. currentmodule:: learning_machine.engine
+
+.. autoclass:: learning_machine.engine.RobustScaler
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~RobustScaler.__init__
+      ~RobustScaler.from_config
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~RobustScaler.engine_type
+   
+   

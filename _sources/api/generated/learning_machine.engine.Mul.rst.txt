@@ -1,0 +1,29 @@
+﻿Mul
+===
+
+.. currentmodule:: learning_machine.engine
+
+.. autoclass:: learning_machine.engine.Mul
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~Mul.__init__
+      ~Mul.from_config
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~Mul.engine_type
+   
+   

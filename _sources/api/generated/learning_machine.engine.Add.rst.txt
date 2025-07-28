@@ -1,0 +1,29 @@
+﻿Add
+===
+
+.. currentmodule:: learning_machine.engine
+
+.. autoclass:: learning_machine.engine.Add
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~Add.__init__
+      ~Add.from_config
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~Add.engine_type
+   
+   

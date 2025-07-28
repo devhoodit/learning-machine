@@ -1,0 +1,29 @@
+﻿learning\_machine.engine.FillNa
+===============================
+
+.. currentmodule:: learning_machine.engine
+
+.. autoclass:: FillNa
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~FillNa.__init__
+      ~FillNa.from_config
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~FillNa.engine_type
+   
+   

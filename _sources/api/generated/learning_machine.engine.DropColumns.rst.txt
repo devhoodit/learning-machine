@@ -1,0 +1,29 @@
+﻿DropColumns
+===========
+
+.. currentmodule:: learning_machine.engine
+
+.. autoclass:: learning_machine.engine.DropColumns
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~DropColumns.__init__
+      ~DropColumns.from_config
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~DropColumns.engine_type
+   
+   

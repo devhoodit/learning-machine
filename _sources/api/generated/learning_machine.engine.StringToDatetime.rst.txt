@@ -1,0 +1,29 @@
+﻿StringToDatetime
+================
+
+.. currentmodule:: learning_machine.engine
+
+.. autoclass:: learning_machine.engine.StringToDatetime
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~StringToDatetime.__init__
+      ~StringToDatetime.from_config
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~StringToDatetime.engine_type
+   
+   

@@ -1,0 +1,29 @@
+﻿OneHotEncoder
+=============
+
+.. currentmodule:: learning_machine.engine
+
+.. autoclass:: learning_machine.engine.OneHotEncoder
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~OneHotEncoder.__init__
+      ~OneHotEncoder.from_config
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~OneHotEncoder.engine_type
+   
+   

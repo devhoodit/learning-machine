@@ -1,0 +1,29 @@
+﻿BinaryOperator
+==============
+
+.. currentmodule:: learning_machine.engine
+
+.. autoclass:: learning_machine.engine.BinaryOperator
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~BinaryOperator.__init__
+      ~BinaryOperator.from_config
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~BinaryOperator.engine_type
+   
+   

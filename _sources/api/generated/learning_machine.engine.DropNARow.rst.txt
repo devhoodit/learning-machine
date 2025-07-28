@@ -1,0 +1,29 @@
+﻿DropNARow
+=========
+
+.. currentmodule:: learning_machine.engine
+
+.. autoclass:: learning_machine.engine.DropNARow
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~DropNARow.__init__
+      ~DropNARow.from_config
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~DropNARow.engine_type
+   
+   

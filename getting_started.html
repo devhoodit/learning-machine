@@ -1,0 +1,669 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Getting Started &#8212; Learning Machine  documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css?v=6644e6bb" />
+    <link rel="stylesheet" type="text/css" href="_static/table.css?v=ca4605bf" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+
+    <script src="_static/documentation_options.js?v=5929fcd5"></script>
+    <script src="_static/doctools.js?v=9bcbadda"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'getting_started';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="API references" href="api/index.html" />
+    <link rel="prev" title="Learning Machine" href="index.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class="col-lg-3 navbar-header-items__start">
+    
+      <div class="navbar-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Learning Machine  documentation</p>
+  
+</a></div>
+    
+  </div>
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item current active">
+  <a class="nav-link nav-internal" href="#">
+    Getting Started
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="api/index.html">
+    API references
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+        </div>
+      
+      
+        <div class="navbar-item">
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+    </div>
+  
+
+  
+    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="On this page">
+      <span class="fa-solid fa-outdent"></span>
+    </button>
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          
+          
+            <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item current active">
+  <a class="nav-link nav-internal" href="#">
+    Getting Started
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="api/index.html">
+    API references
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+          
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
+        
+      </div>
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+<nav class="bd-docs-nav bd-links"
+     aria-label="Section Navigation">
+  <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
+  <div class="bd-toc-item navbar-nav"></div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+<nav aria-label="Breadcrumb" class="d-print-none">
+  <ul class="bd-breadcrumbs">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis">Getting Started</span></li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="getting-started">
+<h1>Getting Started<a class="headerlink" href="#getting-started" title="Link to this heading">#</a></h1>
+<section id="contents">
+<h2>Contents<a class="headerlink" href="#contents" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><a class="reference internal" href="#what-is-learning-machine-for"><span class="std std-ref">What is Learning Machine (LM) for?</span></a></p></li>
+<li><p><a class="reference internal" href="#overview"><span class="std std-ref">Overview</span></a></p></li>
+<li><p><a class="reference internal" href="#install"><span class="std std-ref">Install</span></a></p></li>
+<li><p><a class="reference internal" href="#quick-start"><span class="std std-ref">Quick start</span></a></p></li>
+</ul>
+</section>
+<section id="what-is-learning-machine-lm-for">
+<span id="what-is-learning-machine-for"></span><h2>What is Learning Machine (LM) for?<a class="headerlink" href="#what-is-learning-machine-lm-for" title="Link to this heading">#</a></h2>
+<p>Learning Machine (LM) is for supporting machine learning data preprocessing, model construction, and experiment configuration. LM supports configuration files in YAML format, allowing users to easily define processing pipelines and manage version. Also, provides built-in, general-purpose and widely used processing engines to facilitate convenient processing.</p>
+</section>
+<section id="overview">
+<span id="id1"></span><h2>Overview<a class="headerlink" href="#overview" title="Link to this heading">#</a></h2>
+<p>Learning Machine consists of several major components.</p>
+<ul class="simple">
+<li><p>Data engine</p></li>
+<li><p>Model (work in progress)</p></li>
+<li><p>Params (work in progress)</p></li>
+</ul>
+<section id="data-engine">
+<h3>Data engine<a class="headerlink" href="#data-engine" title="Link to this heading">#</a></h3>
+<p>Data engine processes input data. User can stack process engines to build complex pipeline. By default, data engine supports processing with pandas.Dataframe.</p>
+</section>
+<section id="model">
+<h3>Model<a class="headerlink" href="#model" title="Link to this heading">#</a></h3>
+<p>Model provides a consistent interface (train, validate, test).</p>
+</section>
+<section id="params">
+<h3>Params<a class="headerlink" href="#params" title="Link to this heading">#</a></h3>
+<p>Params provides default optuna tuning parameters.</p>
+</section>
+</section>
+<section id="install">
+<span id="id2"></span><h2>Install<a class="headerlink" href="#install" title="Link to this heading">#</a></h2>
+<section id="as-package">
+<h3>as package<a class="headerlink" href="#as-package" title="Link to this heading">#</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+</section>
+<section id="as-directory">
+<h3>as directory<a class="headerlink" href="#as-directory" title="Link to this heading">#</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">clone</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">devhoodit</span><span class="o">/</span><span class="n">learning</span><span class="o">-</span><span class="n">machine</span><span class="o">.</span><span class="n">git</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="quick-start">
+<span id="id3"></span><h2>Quick start<a class="headerlink" href="#quick-start" title="Link to this heading">#</a></h2>
+<section id="process-data">
+<h3>Process data<a class="headerlink" href="#process-data" title="Link to this heading">#</a></h3>
+<p>We will start with <a class="reference external" href="https://www.kaggle.com/c/titanic/data">titanic dataset</a>. In titanic dataset, there are some nan values and categorical data.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">seaborn</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">sns</span>
+
+<span class="n">data</span> <span class="o">=</span> <span class="n">sns</span><span class="o">.</span><span class="n">load_dataset</span><span class="p">(</span><span class="s1">&#39;titanic&#39;</span><span class="p">)</span>
+<span class="c1"># pclass = class, so drop</span>
+<span class="n">data</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">drop</span><span class="p">([</span><span class="s2">&quot;pclass&quot;</span><span class="p">],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">3</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">info</span><span class="p">())</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>   survived     sex   age  sibsp  parch     fare embarked  class    who  \
+0         0    male  22.0      1      0   7.2500        S  Third    man   
+1         1  female  38.0      1      0  71.2833        C  First  woman   
+2         1  female  26.0      0      0   7.9250        S  Third  woman   
+
+   adult_male deck  embark_town alive  alone  
+0        True  NaN  Southampton    no  False  
+1       False    C    Cherbourg   yes  False  
+2       False  NaN  Southampton   yes   True 
+
+RangeIndex: 891 entries, 0 to 890
+Data columns (total 14 columns):
+ #   Column       Non-Null Count  Dtype   
+---  ------       --------------  -----   
+ 0   survived     891 non-null    int64   
+ 1   sex          891 non-null    object  
+ 2   age          714 non-null    float64 
+ 3   sibsp        891 non-null    int64   
+ 4   parch        891 non-null    int64   
+ 5   fare         891 non-null    float64 
+ 6   embarked     889 non-null    object  
+ 7   class        891 non-null    category
+ 8   who          891 non-null    object  
+ 9   adult_male   891 non-null    bool    
+ 10  deck         203 non-null    category
+ 11  embark_town  889 non-null    object  
+ 12  alive        891 non-null    object  
+ 13  alone        891 non-null    bool    
+dtypes: bool(2), category(2), float64(2), int64(3), object(5)
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">age</span></code> and <code class="docutils literal notranslate"><span class="pre">deck</span></code> have nan values.
+<code class="docutils literal notranslate"><span class="pre">sex</span></code>, <code class="docutils literal notranslate"><span class="pre">embarked</span></code>, <code class="docutils literal notranslate"><span class="pre">class</span></code>, <code class="docutils literal notranslate"><span class="pre">who</span></code>, <code class="docutils literal notranslate"><span class="pre">adult_male</span></code>, <code class="docutils literal notranslate"><span class="pre">deck</span></code>, <code class="docutils literal notranslate"><span class="pre">embark_town</span></code> and <code class="docutils literal notranslate"><span class="pre">alone</span></code> are categorical data.<br />
+We will drop nan value rows and encode categorical data to one hot representation.<br />
+We will build data processing pipeline with Learning Machine’s data engine. Data engine is created via initial settings and processes data by passing data into engine instance. We can build processing pipeline by flowing data through multiple data engines sequentially.<br />
+The following example code shows commonly used data engines and important features when using them.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">learning_machine.engine</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">lm_engine</span>
+
+<span class="n">category_cols</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;sex&quot;</span><span class="p">,</span> <span class="s2">&quot;embarked&quot;</span><span class="p">,</span> <span class="s2">&quot;class&quot;</span><span class="p">,</span> <span class="s2">&quot;who&quot;</span><span class="p">,</span> <span class="s2">&quot;adult_male&quot;</span><span class="p">,</span> <span class="s2">&quot;deck&quot;</span><span class="p">,</span> <span class="s2">&quot;embark_town&quot;</span><span class="p">,</span> <span class="s2">&quot;alone&quot;</span><span class="p">]</span>
+
+<span class="c1"># One Hot Encoder return NEW dataframe, so we need to concat it with original dataframe</span>
+<span class="n">onehot_engine</span> <span class="o">=</span> <span class="n">lm_engine</span><span class="o">.</span><span class="n">OneHotEncoder</span><span class="p">(</span><span class="n">cols</span><span class="o">=</span><span class="n">category_cols</span><span class="p">)</span>
+<span class="c1"># Concat original data with new data</span>
+<span class="n">concat_engine</span> <span class="o">=</span> <span class="n">lm_engine</span><span class="o">.</span><span class="n">ConcatDFs</span><span class="p">([</span><span class="n">onehot_engine</span><span class="p">])</span>
+
+<span class="c1"># drop nan value rows</span>
+<span class="n">dropna_engine</span> <span class="o">=</span> <span class="n">lm_engine</span><span class="o">.</span><span class="n">DropNARow</span><span class="p">(</span><span class="n">cols</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;age&quot;</span><span class="p">])</span>
+
+<span class="c1"># drop processed columns. these columns are already encoded</span>
+<span class="n">dropcol_engine</span> <span class="o">=</span> <span class="n">lm_engine</span><span class="o">.</span><span class="n">DropColumns</span><span class="p">(</span><span class="n">cols</span><span class="o">=</span><span class="n">category_cols</span><span class="p">)</span>
+
+<span class="c1"># apply engie sequentially</span>
+<span class="n">seq_engine</span> <span class="o">=</span> <span class="n">lm_engine</span><span class="o">.</span><span class="n">SequentialEngine</span><span class="p">([</span><span class="n">concat_engine</span><span class="p">,</span> <span class="n">dropna_engine</span><span class="p">,</span> <span class="n">dropcol_engine</span><span class="p">])</span>
+
+<span class="c1"># process data</span>
+<span class="n">data</span> <span class="o">=</span> <span class="n">seq_engine</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+<span class="n">data</span><span class="o">.</span><span class="n">info</span><span class="p">()</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Index</span><span class="p">:</span> <span class="mi">714</span> <span class="n">entries</span><span class="p">,</span> <span class="mi">0</span> <span class="n">to</span> <span class="mi">890</span>
+<span class="n">Data</span> <span class="n">columns</span> <span class="p">(</span><span class="n">total</span> <span class="mi">34</span> <span class="n">columns</span><span class="p">):</span>
+ <span class="c1">#   Column              Non-Null Count  Dtype  </span>
+<span class="o">---</span>  <span class="o">------</span>              <span class="o">--------------</span>  <span class="o">-----</span>  
+ <span class="mi">0</span>   <span class="n">survived</span>            <span class="mi">714</span> <span class="n">non</span><span class="o">-</span><span class="n">null</span>    <span class="n">int64</span>  
+ <span class="mi">1</span>   <span class="n">age</span>                 <span class="mi">714</span> <span class="n">non</span><span class="o">-</span><span class="n">null</span>    <span class="n">float64</span>
+ <span class="mi">2</span>   <span class="n">sibsp</span>               <span class="mi">714</span> <span class="n">non</span><span class="o">-</span><span class="n">null</span>    <span class="n">int64</span>  
+ <span class="mi">3</span>   <span class="n">parch</span>               <span class="mi">714</span> <span class="n">non</span><span class="o">-</span><span class="n">null</span>    <span class="n">int64</span>  
+ <span class="mi">4</span>   <span class="n">fare</span>                <span class="mi">714</span> <span class="n">non</span><span class="o">-</span><span class="n">null</span>    <span class="n">float64</span>
+ <span class="mi">5</span>   <span class="n">alive</span>               <span class="mi">714</span> <span class="n">non</span><span class="o">-</span><span class="n">null</span>    <span class="nb">object</span> 
+ <span class="mi">6</span>   <span class="n">onehot_female</span>       <span class="mi">714</span> <span class="n">non</span><span class="o">-</span><span class="n">null</span>    <span class="n">float64</span>
+ <span class="mi">7</span>   <span class="n">onehot_male</span>         <span class="mi">714</span> <span class="n">non</span><span class="o">-</span><span class="n">null</span>    <span class="n">float64</span>
+ <span class="mi">8</span>   <span class="n">onehot_C</span>            <span class="mi">714</span> <span class="n">non</span><span class="o">-</span><span class="n">null</span>    <span class="n">float64</span>
+ <span class="mi">9</span>   <span class="n">onehot_Q</span>            <span class="mi">714</span> <span class="n">non</span><span class="o">-</span><span class="n">null</span>    <span class="n">float64</span>
+ <span class="mi">10</span>  <span class="n">onehot_S</span>            <span class="mi">714</span> <span class="n">non</span><span class="o">-</span><span class="n">null</span>    <span class="n">float64</span>
+ <span class="mi">11</span>  <span class="n">onehot_nan</span>          <span class="mi">714</span> <span class="n">non</span><span class="o">-</span><span class="n">null</span>    <span class="n">float64</span>
+ <span class="mi">12</span>  <span class="n">onehot_First</span>        <span class="mi">714</span> <span class="n">non</span><span class="o">-</span><span class="n">null</span>    <span class="n">float64</span>
+ <span class="mi">13</span>  <span class="n">onehot_Second</span>       <span class="mi">714</span> <span class="n">non</span><span class="o">-</span><span class="n">null</span>    <span class="n">float64</span>
+ <span class="mi">14</span>  <span class="n">onehot_Third</span>        <span class="mi">714</span> <span class="n">non</span><span class="o">-</span><span class="n">null</span>    <span class="n">float64</span>
+ <span class="mi">15</span>  <span class="n">onehot_child</span>        <span class="mi">714</span> <span class="n">non</span><span class="o">-</span><span class="n">null</span>    <span class="n">float64</span>
+ <span class="mi">16</span>  <span class="n">onehot_man</span>          <span class="mi">714</span> <span class="n">non</span><span class="o">-</span><span class="n">null</span>    <span class="n">float64</span>
+ <span class="mi">17</span>  <span class="n">onehot_woman</span>        <span class="mi">714</span> <span class="n">non</span><span class="o">-</span><span class="n">null</span>    <span class="n">float64</span>
+ <span class="mi">18</span>  <span class="n">onehot_False</span>        <span class="mi">714</span> <span class="n">non</span><span class="o">-</span><span class="n">null</span>    <span class="n">float64</span>
+ <span class="mi">19</span>  <span class="n">onehot_True</span>         <span class="mi">714</span> <span class="n">non</span><span class="o">-</span><span class="n">null</span>    <span class="n">float64</span>
+ <span class="mi">20</span>  <span class="n">onehot_A</span>            <span class="mi">714</span> <span class="n">non</span><span class="o">-</span><span class="n">null</span>    <span class="n">float64</span>
+ <span class="mi">21</span>  <span class="n">onehot_B</span>            <span class="mi">714</span> <span class="n">non</span><span class="o">-</span><span class="n">null</span>    <span class="n">float64</span>
+ <span class="mi">22</span>  <span class="n">onehot_C</span>            <span class="mi">714</span> <span class="n">non</span><span class="o">-</span><span class="n">null</span>    <span class="n">float64</span>
+ <span class="mi">23</span>  <span class="n">onehot_D</span>            <span class="mi">714</span> <span class="n">non</span><span class="o">-</span><span class="n">null</span>    <span class="n">float64</span>
+ <span class="mi">24</span>  <span class="n">onehot_E</span>            <span class="mi">714</span> <span class="n">non</span><span class="o">-</span><span class="n">null</span>    <span class="n">float64</span>
+ <span class="mi">25</span>  <span class="n">onehot_F</span>            <span class="mi">714</span> <span class="n">non</span><span class="o">-</span><span class="n">null</span>    <span class="n">float64</span>
+ <span class="mi">26</span>  <span class="n">onehot_G</span>            <span class="mi">714</span> <span class="n">non</span><span class="o">-</span><span class="n">null</span>    <span class="n">float64</span>
+ <span class="mi">27</span>  <span class="n">onehot_nan</span>          <span class="mi">714</span> <span class="n">non</span><span class="o">-</span><span class="n">null</span>    <span class="n">float64</span>
+ <span class="mi">28</span>  <span class="n">onehot_Cherbourg</span>    <span class="mi">714</span> <span class="n">non</span><span class="o">-</span><span class="n">null</span>    <span class="n">float64</span>
+ <span class="mi">29</span>  <span class="n">onehot_Queenstown</span>   <span class="mi">714</span> <span class="n">non</span><span class="o">-</span><span class="n">null</span>    <span class="n">float64</span>
+ <span class="mi">30</span>  <span class="n">onehot_Southampton</span>  <span class="mi">714</span> <span class="n">non</span><span class="o">-</span><span class="n">null</span>    <span class="n">float64</span>
+ <span class="mi">31</span>  <span class="n">onehot_nan</span>          <span class="mi">714</span> <span class="n">non</span><span class="o">-</span><span class="n">null</span>    <span class="n">float64</span>
+ <span class="mi">32</span>  <span class="n">onehot_False</span>        <span class="mi">714</span> <span class="n">non</span><span class="o">-</span><span class="n">null</span>    <span class="n">float64</span>
+ <span class="mi">33</span>  <span class="n">onehot_True</span>         <span class="mi">714</span> <span class="n">non</span><span class="o">-</span><span class="n">null</span>    <span class="n">float64</span>
+<span class="n">dtypes</span><span class="p">:</span> <span class="n">float64</span><span class="p">(</span><span class="mi">30</span><span class="p">),</span> <span class="n">int64</span><span class="p">(</span><span class="mi">3</span><span class="p">),</span> <span class="nb">object</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>nan value rows are droped and one hot encodings are also successfully done.
+The following is a brief description of each engine.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">OneHotEncoder</span></code>: One hot encoding using <a class="reference external" href="https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.OneHotEncoder.html">scikit-learn onehot encoder</a>. Engine returns new dataframe in which each column name is onehot_{category_name}</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ConcatDFs</span></code>: Apply each engine and concat return dataframe with original data. This engine is used to concatenate the resulting Dataframes produced by engines.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">DropNARows</span></code>: Drop na row in specific columns</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">DropColumns</span></code>: Drop columns</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">SequentialEngine</span></code>: Apply engines sequentially. data -&gt; engine1 -&gt; data1 -&gt; engine2 -&gt; data2. This is useful for grouping multiple engines into a single composite engine.</p></li>
+</ul>
+<p>Other engines can be found <a class="reference internal" href="api/engine.html"><span class="std std-doc">here</span></a>.</p>
+</section>
+<section id="build-data-engine-from-config-file">
+<h3>Build data engine from config file<a class="headerlink" href="#build-data-engine-from-config-file" title="Link to this heading">#</a></h3>
+<p>The above example demonstrates building data engine with code, but it can also be built via a config file. Learning Machine supports YAML format config file.</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="c1"># config.yaml</span>
+
+<span class="nt">data_engine</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">ConcatDFs</span><span class="p">:</span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">OneHotEncoder</span><span class="p">:</span>
+<span class="w">            </span><span class="nt">cols</span><span class="p">:</span>
+<span class="w">                </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">sex</span>
+<span class="w">                </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">embarked</span>
+<span class="w">                </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">class</span>
+<span class="w">                </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">who</span>
+<span class="w">                </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">adult_male</span>
+<span class="w">                </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">deck</span>
+<span class="w">                </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">embark_town</span>
+<span class="w">                </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">alone</span>
+
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">DropNARow</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">cols</span><span class="p">:</span>
+<span class="w">            </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">age</span>
+
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">DropColumns</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">cols</span><span class="p">:</span>
+<span class="w">            </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">sex</span>
+<span class="w">            </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">embarked</span>
+<span class="w">            </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">class</span>
+<span class="w">            </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">who</span>
+<span class="w">            </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">adult_male</span>
+<span class="w">            </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">deck</span>
+<span class="w">            </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">embark_town</span>
+<span class="w">            </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">alone</span>
+</pre></div>
+</div>
+<p>As you might have noticed, config file format is same as name of data engine and arguments (key-value). There is one exception: <code class="docutils literal notranslate"><span class="pre">ConcatDFs</span></code> format is list of engines. Since <code class="docutils literal notranslate"><span class="pre">ConcatDFs</span></code> takes engines as arguments, it requires a special format. Some engine might require a specialized format.
+Now, we will build engine from config file.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">learning_machine</span><span class="w"> </span><span class="kn">import</span> <span class="n">create_from_config</span>
+
+<span class="n">bundle</span> <span class="o">=</span> <span class="n">create_from_config</span><span class="p">(</span><span class="s2">&quot;config.yaml&quot;</span><span class="p">)</span>
+<span class="n">engine</span> <span class="o">=</span> <span class="n">bundle</span><span class="o">.</span><span class="n">data_engine</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">create_from_config</span></code> return bundle (we can build other component from config), so we need to get data engine. In config file, the engines are specified as a list. However, <code class="docutils literal notranslate"><span class="pre">create_from_config</span></code> automatically apply <code class="docutils literal notranslate"><span class="pre">SequentialEngine</span></code> to concat engines. Additionally, individual engines can be accessed through the <code class="docutils literal notranslate"><span class="pre">bundle.data_engines</span></code> attribute.</p>
+</section>
+</section>
+</section>
+
+
+                </article>
+              
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="index.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Learning Machine</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="api/index.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">API references</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+<div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+  </div>
+  <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#contents">Contents</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-learning-machine-lm-for">What is Learning Machine (LM) for?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#overview">Overview</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#data-engine">Data engine</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#model">Model</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#params">Params</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#install">Install</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#as-package">as package</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#as-directory">as directory</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#quick-start">Quick start</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#process-data">Process data</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#build-data-engine-from-config-file">Build data engine from config file</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+  <div class="sidebar-secondary-item">
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/getting_started.md.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+
+  <p class="copyright">
+    
+      © Copyright 2025, devhoodit.
+      <br/>
+    
+  </p>
+</div>
+      
+        <div class="footer-item">
+
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.2.3.
+    <br/>
+  </p>
+</div>
+      
+    </div>
+  
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item">
+<p class="theme-version">
+  <!-- # L10n: Setting the PST URL as an argument as this does not need to be localized -->
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.16.1.
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>

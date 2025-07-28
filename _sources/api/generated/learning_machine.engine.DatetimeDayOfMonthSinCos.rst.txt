@@ -1,0 +1,29 @@
+﻿DatetimeDayOfMonthSinCos
+========================
+
+.. currentmodule:: learning_machine.engine
+
+.. autoclass:: learning_machine.engine.DatetimeDayOfMonthSinCos
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~DatetimeDayOfMonthSinCos.__init__
+      ~DatetimeDayOfMonthSinCos.from_config
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~DatetimeDayOfMonthSinCos.engine_type
+   
+   

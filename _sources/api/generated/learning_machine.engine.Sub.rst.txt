@@ -1,0 +1,29 @@
+﻿Sub
+===
+
+.. currentmodule:: learning_machine.engine
+
+.. autoclass:: learning_machine.engine.Sub
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~Sub.__init__
+      ~Sub.from_config
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~Sub.engine_type
+   
+   

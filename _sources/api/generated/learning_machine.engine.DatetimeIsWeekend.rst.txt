@@ -1,0 +1,29 @@
+﻿DatetimeIsWeekend
+=================
+
+.. currentmodule:: learning_machine.engine
+
+.. autoclass:: learning_machine.engine.DatetimeIsWeekend
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~DatetimeIsWeekend.__init__
+      ~DatetimeIsWeekend.from_config
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~DatetimeIsWeekend.engine_type
+   
+   

@@ -1,0 +1,9 @@
+Getting Started
+===============
+
+This guide helps you get started with the project.
+
+.. code-block:: python
+
+    from mylib.core import add
+    print(add(1, 2))

@@ -1,0 +1,30 @@
+﻿Bundle
+======
+
+.. currentmodule:: learning_machine
+
+.. autoclass:: learning_machine.Bundle
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~Bundle.__init__
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~Bundle.data_engines
+      ~Bundle.data_engine
+      ~Bundle.model
+   
+   

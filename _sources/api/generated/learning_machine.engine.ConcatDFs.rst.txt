@@ -1,0 +1,29 @@
+﻿ConcatDFs
+=========
+
+.. currentmodule:: learning_machine.engine
+
+.. autoclass:: learning_machine.engine.ConcatDFs
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~ConcatDFs.__init__
+      ~ConcatDFs.from_config
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~ConcatDFs.engine_type
+   
+   

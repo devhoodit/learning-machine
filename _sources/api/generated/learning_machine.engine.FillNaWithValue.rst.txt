@@ -1,0 +1,29 @@
+﻿FillNaWithValue
+===============
+
+.. currentmodule:: learning_machine.engine
+
+.. autoclass:: learning_machine.engine.FillNaWithValue
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~FillNaWithValue.__init__
+      ~FillNaWithValue.from_config
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~FillNaWithValue.engine_type
+   
+   

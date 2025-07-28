@@ -1,0 +1,29 @@
+﻿DatetimeDayOfWeekSinCos
+=======================
+
+.. currentmodule:: learning_machine.engine
+
+.. autoclass:: learning_machine.engine.DatetimeDayOfWeekSinCos
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~DatetimeDayOfWeekSinCos.__init__
+      ~DatetimeDayOfWeekSinCos.from_config
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~DatetimeDayOfWeekSinCos.engine_type
+   
+   

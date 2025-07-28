@@ -1,0 +1,29 @@
+﻿DatetimeMonthOfYear
+===================
+
+.. currentmodule:: learning_machine.engine
+
+.. autoclass:: learning_machine.engine.DatetimeMonthOfYear
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~DatetimeMonthOfYear.__init__
+      ~DatetimeMonthOfYear.from_config
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~DatetimeMonthOfYear.engine_type
+   
+   

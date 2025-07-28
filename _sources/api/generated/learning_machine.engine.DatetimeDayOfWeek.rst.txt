@@ -1,0 +1,29 @@
+﻿DatetimeDayOfWeek
+=================
+
+.. currentmodule:: learning_machine.engine
+
+.. autoclass:: learning_machine.engine.DatetimeDayOfWeek
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~DatetimeDayOfWeek.__init__
+      ~DatetimeDayOfWeek.from_config
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~DatetimeDayOfWeek.engine_type
+   
+   

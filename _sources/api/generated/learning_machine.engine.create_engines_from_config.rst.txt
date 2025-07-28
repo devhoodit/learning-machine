@@ -1,0 +1,6 @@
+﻿create\_engines\_from\_config
+=============================
+
+.. currentmodule:: learning_machine.engine
+
+.. autofunction:: create_engines_from_config

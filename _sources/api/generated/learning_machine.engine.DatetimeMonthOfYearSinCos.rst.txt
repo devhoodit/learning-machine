@@ -1,0 +1,29 @@
+﻿DatetimeMonthOfYearSinCos
+=========================
+
+.. currentmodule:: learning_machine.engine
+
+.. autoclass:: learning_machine.engine.DatetimeMonthOfYearSinCos
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~DatetimeMonthOfYearSinCos.__init__
+      ~DatetimeMonthOfYearSinCos.from_config
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~DatetimeMonthOfYearSinCos.engine_type
+   
+   

@@ -1,0 +1,8 @@
+Engine API
+===================================
+
+.. automodule:: learning_machine.engine
+.. autosummary::
+    :toctree: generated
+
+    DataEngine

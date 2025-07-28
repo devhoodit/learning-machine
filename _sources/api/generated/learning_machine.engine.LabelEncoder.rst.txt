@@ -1,0 +1,29 @@
+﻿LabelEncoder
+============
+
+.. currentmodule:: learning_machine.engine
+
+.. autoclass:: learning_machine.engine.LabelEncoder
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~LabelEncoder.__init__
+      ~LabelEncoder.from_config
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~LabelEncoder.engine_type
+   
+   

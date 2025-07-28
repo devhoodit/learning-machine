@@ -1,0 +1,29 @@
+﻿DatetimeDayOfMonth
+==================
+
+.. currentmodule:: learning_machine.engine
+
+.. autoclass:: learning_machine.engine.DatetimeDayOfMonth
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~DatetimeDayOfMonth.__init__
+      ~DatetimeDayOfMonth.from_config
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~DatetimeDayOfMonth.engine_type
+   
+   

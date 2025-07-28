@@ -1,0 +1,29 @@
+﻿MinMaxScaler
+============
+
+.. currentmodule:: learning_machine.engine
+
+.. autoclass:: learning_machine.engine.MinMaxScaler
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~MinMaxScaler.__init__
+      ~MinMaxScaler.from_config
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~MinMaxScaler.engine_type
+   
+   

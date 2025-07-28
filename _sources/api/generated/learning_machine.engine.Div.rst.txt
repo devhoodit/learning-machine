@@ -1,0 +1,29 @@
+﻿Div
+===
+
+.. currentmodule:: learning_machine.engine
+
+.. autoclass:: learning_machine.engine.Div
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~Div.__init__
+      ~Div.from_config
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~Div.engine_type
+   
+   

@@ -1,0 +1,32 @@
+.. Learning Machine documentation master file, created by
+   sphinx-quickstart on Fri Jul 25 09:35:14 2025.
+   You can adapt this file completely to your liking, but it should at least
+   contain the root `toctree` directive.
+
+
+
+Learning Machine
+""""""""""""""""
+
+.. raw:: html
+
+   <div style="text-align: center;">
+      <img src="_static/imgs/learning_machine.png" style="background-color: transparent;" width="256px">
+      <p style="margin-top: 8px; margin-bottom: 4px;">When you learn machine, the machine also learns you</p>
+      <h5 style="margin-top: 0; margin-bottom: 12px;">Easy to configure data processing, experiment and testing pipeline</h5>
+   </div>
+
+
+----
+
+Source: `<https://github.com/devhoodit/learning-machine>`_
+
+----
+
+Contents
+^^^^^^^^
+.. toctree::
+   :maxdepth: 1
+
+   getting_started.md
+   api/index

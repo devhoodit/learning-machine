@@ -1,0 +1,29 @@
+﻿DataEngine
+==========
+
+.. currentmodule:: learning_machine.engine
+
+.. autoclass:: learning_machine.engine.DataEngine
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~DataEngine.__init__
+      ~DataEngine.from_config
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~DataEngine.engine_type
+   
+   
