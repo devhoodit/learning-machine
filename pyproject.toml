@@ -1,17 +1,28 @@
 [project]
 name = "learning-machine"
 version = "0.1.0"
-description = "Add your description here"
+description = "Build data processing, model and testing pipeline"
 readme = "README.md"
 requires-python = ">=3.12"
+keywords = ["machine learning", "learning machine"]
+
 dependencies = [
-    "ipykernel>=6.29.5",
     "lightgbm>=4.6.0",
     "numpy>=2.3.1",
     "optuna>=4.4.0",
     "pandas>=2.3.0",
-    "pyyaml>=6.0.2",
+    "pyyaml>=6.0.1",
     "ruff>=0.12.1",
     "scikit-learn>=1.7.0",
     "xgboost>=3.0.2",
 ]
+
+[project.urls]
+Documentation = "https://devhoodit.github.io/learning-machine/"
+
+[build-system]
+requires = ["setuptools>=70.0"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["."]
